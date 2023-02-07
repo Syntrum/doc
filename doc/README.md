@@ -1,21 +1,3 @@
-<div class="tabs">
-  <div class="tab">
-    <input type="radio" id="tab-1" name="tab-group-1" checked>
-    <label for="tab-1">Tab 1</label>
-    <div class="content">
-      Tab 1 content goes here
-    </div>
-  </div>
-  <div class="tab">
-    <input type="radio" id="tab-2" name="tab-group-1">
-    <label for="tab-2">Tab 2</label>
-    <div class="content">
-      Tab 2 content goes here
-    </div>
-  </div>
-  <!-- Add additional tabs as needed -->
-</div>
-
 
 # Syntrum Intro
 
