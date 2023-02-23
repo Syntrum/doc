@@ -23,3 +23,7 @@
 ## EVENTS
 
 * [Token Generation Event](events/token-generation-event.md)
+
+## Developers Resources
+
+* [DeFi APIs](developers-resources/defi-apis.md)
