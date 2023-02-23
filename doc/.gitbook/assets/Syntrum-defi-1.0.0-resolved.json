@@ -1,0 +1,2037 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Defi applications API",
+    "description": "app.syntrum.com api server",
+    "contact": {
+      "email": "serg.paliy@gmail.com"
+    },
+    "license": {
+      "name": "MIT"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://virtserver.swaggerhub.com/Syntrum/defi/1.0.0",
+      "description": "SwaggerHub API Auto Mocking"
+    },
+    {
+      "url": "https://app.syntrum.com/api",
+      "description": "app.syntrum.com api server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "authenticated",
+      "description": "Secured by JSON web tokens"
+    },
+    {
+      "name": "authorized",
+      "description": "Has specified role"
+    },
+    {
+      "name": "common",
+      "description": "Operations available for regular users"
+    }
+  ],
+  "paths": {
+    "/tokens": {
+      "get": {
+        "tags": [
+          "common"
+        ],
+        "summary": "List of tokens used in application with necessary data",
+        "operationId": "tokens",
+        "parameters": [
+          {
+            "name": "network",
+            "in": "query",
+            "description": "network name",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "polygon"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tokens list",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debank/get-statistics": {
+      "get": {
+        "tags": [
+          "common"
+        ],
+        "summary": "Debank statistics data",
+        "operationId": "getStatistics",
+        "parameters": [
+          {
+            "name": "network",
+            "in": "query",
+            "description": "network name",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "polygon"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "debank statistics",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/inline_response_200_1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debank/config": {
+      "get": {
+        "tags": [
+          "common"
+        ],
+        "summary": "Debank configuration data",
+        "operationId": "debankConfig",
+        "parameters": [
+          {
+            "name": "network",
+            "in": "query",
+            "description": "network name",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "polygon"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Debank configuration data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/inline_response_200_2"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bridge/config": {
+      "get": {
+        "tags": [
+          "common"
+        ],
+        "summary": "Bridge configuration data",
+        "operationId": "bridgeConfig",
+        "parameters": [
+          {
+            "name": "network",
+            "in": "query",
+            "description": "network name",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "polygon"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bridge configuration data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/inline_response_200_2"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/staking/config": {
+      "get": {
+        "tags": [
+          "common"
+        ],
+        "summary": "Staking configuration data",
+        "operationId": "stakingConfig",
+        "parameters": [
+          {
+            "name": "network",
+            "in": "query",
+            "description": "network name",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "polygon"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Staking configuration data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/inline_response_200_2"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debank/liquidation": {
+      "get": {
+        "tags": [
+          "authenticated"
+        ],
+        "summary": "endpoint for getting information about loans ready for liquidation",
+        "description": "Returns user address for loan liquidation",
+        "operationId": "liquidation",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "authentication JWT token",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRkcmVzcyI6IjB4RUJmYjI4OGQ0NDI4MDlmMUJBOGFhODEwNmZjZjJEZEU1ZDgyQzAyQyIsImVtYWlsIjpudWxsLCJlbWFpbENvZGUiOm51bGwsImVtYWlsQ29uZmlybWVkQXQiOm51bGwsImNyZWF0ZWRBdCI6MTY2MzQxNjE1MCwiaWF0IjoxNjYzNDE2MjI4LCJleHAiOjE2OTQ5NzM4Mjh9.KA1hdyVxRSTju1E9yYcr2IyLIf9gVDZaxprpp-vSuCg"
+          },
+          {
+            "name": "network",
+            "in": "query",
+            "description": "network name",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "polygon"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "request result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_3"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/get-token": {
+      "get": {
+        "tags": [
+          "common"
+        ],
+        "summary": "endpoint for obtaining data necessary for login",
+        "description": "Returns token and message that should be signed. Signed message and a token should be sent for login to the login endpoint",
+        "operationId": "getToken",
+        "responses": {
+          "200": {
+            "description": "token and message for signing, request result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_4"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/disable-token": {
+      "post": {
+        "tags": [
+          "authenticated"
+        ],
+        "summary": "endpoint for disabling auth tokens",
+        "description": "Disable authentication JWT token",
+        "operationId": "disableToken",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "authentication JWT token",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRkcmVzcyI6IjB4RUJmYjI4OGQ0NDI4MDlmMUJBOGFhODEwNmZjZjJEZEU1ZDgyQzAyQyIsImVtYWlsIjpudWxsLCJlbWFpbENvZGUiOm51bGwsImVtYWlsQ29uZmlybWVkQXQiOm51bGwsImNyZWF0ZWRBdCI6MTY2MzQxNjE1MCwiaWF0IjoxNjYzNDE2MjI4LCJleHAiOjE2OTQ5NzM4Mjh9.KA1hdyVxRSTju1E9yYcr2IyLIf9gVDZaxprpp-vSuCg"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/auth_disabletoken_body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "request result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_5"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": [
+          "common"
+        ],
+        "summary": "endpoint for login",
+        "description": "login using ethereum wallet",
+        "operationId": "login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/auth_login_body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "authentication JWT token, request result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_6"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/role/add": {
+      "post": {
+        "tags": [
+          "authorized"
+        ],
+        "summary": "grant role to specified user",
+        "operationId": "addRole",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "authentication JWT token",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRkcmVzcyI6IjB4RUJmYjI4OGQ0NDI4MDlmMUJBOGFhODEwNmZjZjJEZEU1ZDgyQzAyQyIsImVtYWlsIjpudWxsLCJlbWFpbENvZGUiOm51bGwsImVtYWlsQ29uZmlybWVkQXQiOm51bGwsImNyZWF0ZWRBdCI6MTY2MzQxNjE1MCwiaWF0IjoxNjYzNDE2MjI4LCJleHAiOjE2OTQ5NzM4Mjh9.KA1hdyVxRSTju1E9yYcr2IyLIf9gVDZaxprpp-vSuCg"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/role_add_body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "request result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/inline_response_200_7"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/role/remove": {
+      "post": {
+        "tags": [
+          "authorized"
+        ],
+        "summary": "dismiss role from specified user",
+        "operationId": "removeRole",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "authentication JWT token",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRkcmVzcyI6IjB4RUJmYjI4OGQ0NDI4MDlmMUJBOGFhODEwNmZjZjJEZEU1ZDgyQzAyQyIsImVtYWlsIjpudWxsLCJlbWFpbENvZGUiOm51bGwsImVtYWlsQ29uZmlybWVkQXQiOm51bGwsImNyZWF0ZWRBdCI6MTY2MzQxNjE1MCwiaWF0IjoxNjYzNDE2MjI4LCJleHAiOjE2OTQ5NzM4Mjh9.KA1hdyVxRSTju1E9yYcr2IyLIf9gVDZaxprpp-vSuCg"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/role_remove_body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "request result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/inline_response_200_7"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/get-data": {
+      "get": {
+        "tags": [
+          "authenticated"
+        ],
+        "summary": "User data",
+        "description": "Returns user record data for authenticated user",
+        "operationId": "userGetData",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "authentication JWT token",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRkcmVzcyI6IjB4RUJmYjI4OGQ0NDI4MDlmMUJBOGFhODEwNmZjZjJEZEU1ZDgyQzAyQyIsImVtYWlsIjpudWxsLCJlbWFpbENvZGUiOm51bGwsImVtYWlsQ29uZmlybWVkQXQiOm51bGwsImNyZWF0ZWRBdCI6MTY2MzQxNjE1MCwiaWF0IjoxNjYzNDE2MjI4LCJleHAiOjE2OTQ5NzM4Mjh9.KA1hdyVxRSTju1E9yYcr2IyLIf9gVDZaxprpp-vSuCg"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "user record data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/inline_response_200_8"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/confirm-email": {
+      "post": {
+        "tags": [
+          "common"
+        ],
+        "summary": "endpoint for confirming email",
+        "description": "Confirm email set for user",
+        "operationId": "confirmEmail",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/users_confirmemail_body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "result of the email confirmation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/inline_response_200_9"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/set-email": {
+      "post": {
+        "tags": [
+          "authenticated"
+        ],
+        "summary": "endpoint for bounding email to the user's record",
+        "description": "Set email",
+        "operationId": "setEmail",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "authentication JWT token",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRkcmVzcyI6IjB4RUJmYjI4OGQ0NDI4MDlmMUJBOGFhODEwNmZjZjJEZEU1ZDgyQzAyQyIsImVtYWlsIjpudWxsLCJlbWFpbENvZGUiOm51bGwsImVtYWlsQ29uZmlybWVkQXQiOm51bGwsImNyZWF0ZWRBdCI6MTY2MzQxNjE1MCwiaWF0IjoxNjYzNDE2MjI4LCJleHAiOjE2OTQ5NzM4Mjh9.KA1hdyVxRSTju1E9yYcr2IyLIf9gVDZaxprpp-vSuCg"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/users_setemail_body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "result of the request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_5"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscription/add": {
+      "post": {
+        "tags": [
+          "common"
+        ],
+        "summary": "endpoint for adding email to the subscribers list",
+        "description": "Subscribe email address for a news letters",
+        "operationId": "subscribe",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/subscription_add_body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "result of the request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_10"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscription/remove": {
+      "post": {
+        "tags": [
+          "common"
+        ],
+        "summary": "endpoint for removing email from the subscribers list",
+        "description": "Unsubscribe email address",
+        "operationId": "unSubscribe",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/subscription_remove_body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "result of the request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_10"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscription/confirm-email": {
+      "post": {
+        "tags": [
+          "common"
+        ],
+        "summary": "endpoint for confirming email",
+        "description": "Confirm email added to subscriptions. code from confirmation link \n(  GET parameter emailConfirmation, /?emailConfirmation= )\n",
+        "operationId": "subscriptionConfirmEmail",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/subscription_confirmemail_body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "result of the email confirmation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/inline_response_200_9"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscription/list": {
+      "get": {
+        "tags": [
+          "authorized"
+        ],
+        "summary": "get a list of subscribers",
+        "operationId": "getSubscriptions",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "authentication JWT token",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRkcmVzcyI6IjB4RUJmYjI4OGQ0NDI4MDlmMUJBOGFhODEwNmZjZjJEZEU1ZDgyQzAyQyIsImVtYWlsIjpudWxsLCJlbWFpbENvZGUiOm51bGwsImVtYWlsQ29uZmlybWVkQXQiOm51bGwsImNyZWF0ZWRBdCI6MTY2MzQxNjE1MCwiaWF0IjoxNjYzNDE2MjI4LCJleHAiOjE2OTQ5NzM4Mjh9.KA1hdyVxRSTju1E9yYcr2IyLIf9gVDZaxprpp-vSuCg"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "pass an optional data for filtering data in a database",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "sign": {
+                          "type": "string",
+                          "enum": [
+                            "=",
+                            ">",
+                            ">=",
+                            "<",
+                            "<=",
+                            "<>"
+                          ]
+                        }
+                      }
+                    },
+                    "emailConfirmedAt": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "integer"
+                        },
+                        "sign": {
+                          "type": "string",
+                          "enum": [
+                            "=",
+                            ">",
+                            ">=",
+                            "<",
+                            "<=",
+                            "<>"
+                          ]
+                        }
+                      }
+                    },
+                    "unsubscribe": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "integer"
+                        },
+                        "sign": {
+                          "type": "string",
+                          "enum": [
+                            "=",
+                            ">",
+                            ">=",
+                            "<",
+                            "<=",
+                            "<>"
+                          ]
+                        }
+                      }
+                    },
+                    "createdAt": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "integer"
+                        },
+                        "sign": {
+                          "type": "string",
+                          "enum": [
+                            "=",
+                            ">",
+                            ">=",
+                            "<",
+                            "<=",
+                            "<>"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "define database column for sorting by",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "desc",
+            "in": "query",
+            "description": "optional if 1 sorting will be in descent direction",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "enum": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "maximum number of records to return per page",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page number",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "minimum": 1,
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "subscriptions list",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/inline_response_200_11"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscription/unsubscribed": {
+      "get": {
+        "tags": [
+          "authorized"
+        ],
+        "summary": "get a list of unsubscribed emails",
+        "operationId": "getUnsubscribed",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "authentication JWT token",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRkcmVzcyI6IjB4RUJmYjI4OGQ0NDI4MDlmMUJBOGFhODEwNmZjZjJEZEU1ZDgyQzAyQyIsImVtYWlsIjpudWxsLCJlbWFpbENvZGUiOm51bGwsImVtYWlsQ29uZmlybWVkQXQiOm51bGwsImNyZWF0ZWRBdCI6MTY2MzQxNjE1MCwiaWF0IjoxNjYzNDE2MjI4LCJleHAiOjE2OTQ5NzM4Mjh9.KA1hdyVxRSTju1E9yYcr2IyLIf9gVDZaxprpp-vSuCg"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "pass an optional data for filtering data in a database",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "sign": {
+                          "type": "string",
+                          "enum": [
+                            "=",
+                            ">",
+                            ">=",
+                            "<",
+                            "<=",
+                            "<>"
+                          ]
+                        }
+                      }
+                    },
+                    "emailConfirmedAt": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "integer"
+                        },
+                        "sign": {
+                          "type": "string",
+                          "enum": [
+                            "=",
+                            ">",
+                            ">=",
+                            "<",
+                            "<=",
+                            "<>"
+                          ]
+                        }
+                      }
+                    },
+                    "unsubscribe": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "integer"
+                        },
+                        "sign": {
+                          "type": "string",
+                          "enum": [
+                            "=",
+                            ">",
+                            ">=",
+                            "<",
+                            "<=",
+                            "<>"
+                          ]
+                        }
+                      }
+                    },
+                    "createdAt": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "integer"
+                        },
+                        "sign": {
+                          "type": "string",
+                          "enum": [
+                            "=",
+                            ">",
+                            ">=",
+                            "<",
+                            "<=",
+                            "<>"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "define database column for sorting by",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "desc",
+            "in": "query",
+            "description": "optional if 1 sorting will be in descent direction",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "enum": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "maximum number of records to return per page",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page number",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "minimum": 1,
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "unsubscribed list",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/inline_response_200_12"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscription/participate": {
+      "post": {
+        "tags": [
+          "common"
+        ],
+        "summary": "endpoint for sending participation requests from the website",
+        "description": "Sending participation requests from the website",
+        "operationId": "par",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/subscription_participate_body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "result of the request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_10"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscription/participation": {
+      "get": {
+        "tags": [
+          "authorized"
+        ],
+        "summary": "get a list of participation requests",
+        "operationId": "getParticipationRequests",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "authentication JWT token",
+            "required": false,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRkcmVzcyI6IjB4RUJmYjI4OGQ0NDI4MDlmMUJBOGFhODEwNmZjZjJEZEU1ZDgyQzAyQyIsImVtYWlsIjpudWxsLCJlbWFpbENvZGUiOm51bGwsImVtYWlsQ29uZmlybWVkQXQiOm51bGwsImNyZWF0ZWRBdCI6MTY2MzQxNjE1MCwiaWF0IjoxNjYzNDE2MjI4LCJleHAiOjE2OTQ5NzM4Mjh9.KA1hdyVxRSTju1E9yYcr2IyLIf9gVDZaxprpp-vSuCg"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "pass an optional data for filtering data in a database",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "sign": {
+                          "type": "string",
+                          "enum": [
+                            "=",
+                            ">",
+                            ">=",
+                            "<",
+                            "<=",
+                            "<>"
+                          ]
+                        }
+                      }
+                    },
+                    "createdAt": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "integer"
+                        },
+                        "sign": {
+                          "type": "string",
+                          "enum": [
+                            "=",
+                            ">",
+                            ">=",
+                            "<",
+                            "<=",
+                            "<>"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "define database column for sorting by",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "desc",
+            "in": "query",
+            "description": "optional if 1 sorting will be in descent direction",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "enum": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "maximum number of records to return per page",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page number",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "minimum": 1,
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "participation requests list",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/inline_response_200_13"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TokensListItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "token record id"
+          },
+          "address": {
+            "type": "string",
+            "description": "token contract address"
+          },
+          "decimals": {
+            "type": "integer",
+            "description": "token decimals"
+          },
+          "symbol": {
+            "type": "string",
+            "description": "token symbol"
+          },
+          "network": {
+            "type": "string",
+            "description": "token contract network"
+          },
+          "usdRate": {
+            "type": "number",
+            "description": "token USD rate"
+          }
+        }
+      },
+      "BorrowingItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "token record id"
+          },
+          "profileId": {
+            "type": "integer",
+            "description": "Borrowing profile id"
+          },
+          "totalBorrowed": {
+            "type": "number",
+            "description": "Total borrowed amount"
+          },
+          "totalLent": {
+            "type": "number",
+            "description": "Total lent amount"
+          },
+          "totalLiquidated": {
+            "type": "number",
+            "description": "Total liquidated amount"
+          },
+          "totalReturned": {
+            "type": "number",
+            "description": "Total returned amount"
+          },
+          "timestamp": {
+            "type": "integer",
+            "description": "time of record"
+          },
+          "network": {
+            "type": "string",
+            "description": "network name"
+          }
+        },
+        "description": "borrowing statistics data"
+      },
+      "CollateralItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "token record id"
+          },
+          "profileId": {
+            "type": "integer",
+            "description": "Borrowing profile id"
+          },
+          "total": {
+            "type": "number",
+            "description": "Total collateral amount"
+          },
+          "usersNumber": {
+            "type": "integer",
+            "description": "Users number"
+          },
+          "timestamp": {
+            "type": "integer",
+            "description": "time of record"
+          },
+          "network": {
+            "type": "string",
+            "description": "network name"
+          }
+        },
+        "description": "borrowing statistics data"
+      },
+      "UserItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "bid record id"
+          },
+          "address": {
+            "type": "string",
+            "description": "Ethereum address bound to the record"
+          },
+          "email": {
+            "type": "string",
+            "description": "Email bound to the record"
+          }
+        }
+      },
+      "SubscriptionItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "record id"
+          },
+          "email": {
+            "type": "string",
+            "description": "email address"
+          },
+          "emailConfirmedAt": {
+            "type": "integer",
+            "description": "email address confirmation timestamp"
+          },
+          "unsubscribed": {
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "createdAt": {
+            "type": "integer",
+            "description": "record creation timestamp"
+          }
+        }
+      },
+      "UnsubscribedItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "record id"
+          },
+          "email": {
+            "type": "string",
+            "description": "email address"
+          },
+          "ip": {
+            "type": "string",
+            "description": "record creator ip address"
+          },
+          "createdAt": {
+            "type": "integer",
+            "description": "record creation timestamp"
+          }
+        }
+      },
+      "ParticipationItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "record id"
+          },
+          "email": {
+            "type": "string",
+            "description": "email address"
+          },
+          "twitter": {
+            "type": "string"
+          },
+          "telegram": {
+            "type": "string"
+          },
+          "companyName": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          },
+          "briefDescription": {
+            "type": "string",
+            "description": "User description"
+          },
+          "category": {
+            "type": "string"
+          },
+          "companyDescription": {
+            "type": "string",
+            "description": "Company description"
+          },
+          "scheduledCall": {
+            "type": "integer",
+            "description": "1 if scheduled call",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "createdAt": {
+            "type": "integer",
+            "description": "record creation timestamp"
+          }
+        }
+      },
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "result": {
+            "$ref": "#/components/schemas/inline_response_200_result"
+          }
+        }
+      },
+      "debankgetstatistics_records_borrowings": {
+        "type": "object",
+        "properties": {
+          "last": {
+            "$ref": "#/components/schemas/BorrowingItem"
+          },
+          "dayBefore": {
+            "$ref": "#/components/schemas/BorrowingItem"
+          }
+        }
+      },
+      "debankgetstatistics_records_collaterals": {
+        "type": "object",
+        "properties": {
+          "last": {
+            "$ref": "#/components/schemas/CollateralItem"
+          },
+          "dayBefore": {
+            "$ref": "#/components/schemas/CollateralItem"
+          }
+        }
+      },
+      "debankgetstatistics_records": {
+        "type": "object",
+        "properties": {
+          "borrowings": {
+            "$ref": "#/components/schemas/debankgetstatistics_records_borrowings"
+          },
+          "collaterals": {
+            "$ref": "#/components/schemas/debankgetstatistics_records_collaterals"
+          }
+        }
+      },
+      "inline_response_200_1": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "records": {
+            "$ref": "#/components/schemas/debankgetstatistics_records"
+          }
+        }
+      },
+      "debankconfig_config_abi": {
+        "type": "object",
+        "properties": {
+          "main": {
+            "type": "object",
+            "description": "contract abi"
+          },
+          "collateral": {
+            "type": "object",
+            "description": "contract abi"
+          },
+          "nftCollateral": {
+            "type": "object",
+            "description": "contract abi"
+          },
+          "reward": {
+            "type": "object",
+            "description": "contract abi"
+          }
+        }
+      },
+      "debankconfig_config_contracts": {
+        "type": "object",
+        "properties": {
+          "main": {
+            "type": "string",
+            "description": "contract address"
+          },
+          "collateral": {
+            "type": "string",
+            "description": "contract address"
+          },
+          "nftCollateral": {
+            "type": "string",
+            "description": "contract address"
+          },
+          "reward": {
+            "type": "string",
+            "description": "contract address"
+          }
+        }
+      },
+      "debankconfig_config": {
+        "type": "object",
+        "properties": {
+          "abi": {
+            "$ref": "#/components/schemas/debankconfig_config_abi"
+          },
+          "contracts": {
+            "$ref": "#/components/schemas/debankconfig_config_contracts"
+          }
+        }
+      },
+      "inline_response_200_2": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "config": {
+            "$ref": "#/components/schemas/debankconfig_config"
+          }
+        }
+      },
+      "inline_response_200_3": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "result": {
+            "$ref": "#/components/schemas/inline_response_200_3_result"
+          }
+        }
+      },
+      "inline_response_200_4": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "result": {
+            "$ref": "#/components/schemas/inline_response_200_4_result"
+          }
+        }
+      },
+      "auth_disabletoken_body": {
+        "type": "object",
+        "properties": {
+          "disabledToken": {
+            "type": "string",
+            "description": "Token that should be disabled"
+          }
+        }
+      },
+      "inline_response_200_5": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "auth_login_body": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "description": "Optional, for login using ethereum wallet. Token obtained along with message for signing"
+          },
+          "signedMessage": {
+            "type": "string",
+            "description": "Optional, for login using ethereum wallet. Signed message"
+          }
+        }
+      },
+      "inline_response_200_6": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "result": {
+            "$ref": "#/components/schemas/inline_response_200_6_result"
+          }
+        }
+      },
+      "role_add_body": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "description": "user id"
+          },
+          "roleId": {
+            "type": "integer",
+            "description": "role id"
+          }
+        }
+      },
+      "inline_response_200_7": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "message": {
+            "type": "string",
+            "description": "optional message"
+          }
+        }
+      },
+      "role_remove_body": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "description": "user id"
+          },
+          "roleId": {
+            "type": "integer",
+            "description": "role id"
+          }
+        }
+      },
+      "inline_response_200_8": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "result": {
+            "$ref": "#/components/schemas/UserItem"
+          }
+        }
+      },
+      "users_confirmemail_body": {
+        "type": "object",
+        "properties": {
+          "emailConfirmation": {
+            "type": "string"
+          }
+        }
+      },
+      "inline_response_200_9": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "users_setemail_body": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "email address that should be bound to the user's record"
+          }
+        }
+      },
+      "subscription_add_body": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "email address"
+          },
+          "url": {
+            "type": "string",
+            "description": "url for confirmation"
+          }
+        }
+      },
+      "inline_response_200_10": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "message": {
+            "type": "string",
+            "description": "Optional message"
+          }
+        }
+      },
+      "subscription_remove_body": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "email address"
+          }
+        }
+      },
+      "subscription_confirmemail_body": {
+        "type": "object",
+        "properties": {
+          "emailConfirmation": {
+            "type": "string"
+          }
+        }
+      },
+      "inline_response_200_11": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SubscriptionItem"
+            }
+          }
+        }
+      },
+      "inline_response_200_12": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnsubscribedItem"
+            }
+          }
+        }
+      },
+      "subscription_participate_body": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "E-mail address"
+          },
+          "name": {
+            "type": "string",
+            "description": "Full name"
+          },
+          "twitter": {
+            "type": "string",
+            "description": "Twitter Handle"
+          },
+          "telegram": {
+            "type": "string",
+            "description": "Telegram Handle"
+          },
+          "companyName": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          },
+          "briefDescription": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "companyDescription": {
+            "type": "string"
+          },
+          "scheduleCall": {
+            "type": "boolean"
+          }
+        }
+      },
+      "inline_response_200_13": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "define does request succeed or not"
+          },
+          "errors": {
+            "type": "array",
+            "description": "errors description if any",
+            "example": [
+              "error1",
+              "error2",
+              "error3"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ParticipationItem"
+            }
+          }
+        }
+      },
+      "inline_response_200_result": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TokensListItem"
+            }
+          }
+        }
+      },
+      "inline_response_200_3_result": {
+        "type": "object",
+        "properties": {
+          "liquidationAddress": {
+            "type": "string",
+            "description": "user address for loan liquidation"
+          }
+        }
+      },
+      "inline_response_200_4_result": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "description": "JWT token that should be sent for login along with the signed message"
+          },
+          "message": {
+            "type": "string",
+            "description": "message should be signed using ethereum wallet and used for login along with the token"
+          }
+        }
+      },
+      "inline_response_200_6_result": {
+        "type": "object",
+        "properties": {
+          "authToken": {
+            "type": "string",
+            "description": "authentication JWT token"
+          }
+        }
+      }
+    }
+  }
+}
