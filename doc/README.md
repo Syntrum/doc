@@ -1,12 +1,13 @@
+
 # Syntrum Intro
 
 {% hint style="success" %}
-**Syntrum** is a multi-layer blockchain infrastructure and ecosystem designed with economic consideration, scalability, and interoperability at its core. It provides developers and projects with the necessary tools and services to build and grow their ventures in a cost-effective manner.
+**Syntrum** is a multi-layer blockchain infrastructure and ecosystem designed with economic, scalability, and interoperability at its core. It provides developers and projects with the necessary tools and services to build and grow their ventures in a cost-effective manner.
 
 The Syntrum blockchain uses a unique combination of Proof of Staked Authority (PoSA) and Proof of Value (PoV) consensus mechanisms to achieve gasless transactions and real-time interoperability without the need for layer 2 bridge applications. With supernodes validating blocks on parallel networks, Syntrum ensures true interoperability in real-time, while ensuring robust network security
 {% endhint %}
 
-The Syntrum Blockchain offers the following features:
+&#x20;The Syntrum Blockchain offers the following features:
 
 #### True interoperability
 
@@ -23,5 +24,7 @@ Syntrum is more than just a blockchain infrastructure - we offer white label sol
 #### Decentralize and Secure
 
 Syntrum uses a hybrid PoS-PoV consensus mechanism, ensuring the security and decentralization of cross-chain interactions. Our super node validation adds an extra layer of security, eliminating the risk of a single point of failure.
+
+
 
 ​

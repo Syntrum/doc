@@ -176,7 +176,7 @@ Decentralize and secure multi-chain crypto mobile wallet developed to give users
 * [ ] NFT assets support
 * [ ] dApp Browser
 
-### DeFi :- SynVault - aaS&#x20;
+### DeFi :- SynVault  as a Service (aaS)&#x20;
 
 Customizable multi-chain dApps aaS, includes staking and liquidity mining vaults. A cost effective and fully audited option for developers and projects.
 
