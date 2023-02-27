@@ -1,6 +1,6 @@
 # DeFi Suite
 
-<figure><img src="../.gitbook/assets/DeFi Suite.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/DeFi Suite.png" alt=""><figcaption></figcaption></figure>
 
 The Syntrum DeFi Suite offers users, including direct consumers, developers, and builders, access to various DeFi applications and tools that are crucial in the DeFi space. The aim is to provide a user-friendly experience by designing these DeFi dApps and tools to be easily accessible and reducing the learning curve for new users.
 

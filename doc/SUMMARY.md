@@ -10,7 +10,12 @@
 
 ## Key Products
 
-* [DeFi Suite](key-products/defi-suite.md)
+* [DeFi Suite](key-products/defi-suite/README.md)
+  * [SynLend](key-products/defi-suite/synlend.md)
+  * [SynMargin](key-products/defi-suite/synmargin.md)
+  * [SynBridge](key-products/defi-suite/synbridge.md)
+  * [SynTokenomics](key-products/defi-suite/syntokenomics.md)
+  * [SynVault](key-products/defi-suite/synvault.md)
 * [GameFi Hub](key-products/gamefi-hub.md)
 * [NFT Factory](key-products/nft-factory.md)
 * [Mobile Wallet](key-products/mobile-wallet.md)
