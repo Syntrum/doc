@@ -18,7 +18,13 @@ If you are yet to, follow Syntrum on Twitter and claim the point for this quest
 
 Link to Quest: [https://zealy.io/c/syntrum/questboard/24b00012-2825-4b5a-8408-4965973098a1](https://zealy.io/c/syntrum/questboard/24b00012-2825-4b5a-8408-4965973098a1)
 
-### **(3) Invite 10 Frens on Zealy (most important)**
+### (3) Like and Retweet Competition&#x20;
+
+Like and retweet the competition announcement.
+
+Link to the quest: [https://zealy.io/c/syntrum/questboard/7ed24044-7a77-4040-aa2f-1f2ac8ce7cfe](https://zealy.io/c/syntrum/questboard/7ed24044-7a77-4040-aa2f-1f2ac8ce7cfe)
+
+### **(4) Invite 10 Frens on Zealy (most important)**
 
 To invite frens to Syntrum community, do the following:&#x20;
 
@@ -34,6 +40,6 @@ You can check your number of invites in your profile.
 
 This quest will auto-validate if you have 10 valid invite.
 
-Link to quest: [https://zealy.io/c/syntrum/questboard/e682f24a-fa88-401a-861f-5c6886657491](https://zealy.io/c/syntrum/questboard/e682f24a-fa88-401a-861f-5c6886657491)
+Link to quest: [https://zealy.io/c/syntrum/questboard/8651d918-0d37-45d9-993a-515fe1115b39](https://zealy.io/c/syntrum/questboard/8651d918-0d37-45d9-993a-515fe1115b39)
 
 \
