@@ -32,3 +32,7 @@
 ## Developers Resources
 
 * [DeFi APIs](developers-resources/defi-apis.md)
+
+## Competitions
+
+* [Zealy Competition](competitions/zealy-competition.md)

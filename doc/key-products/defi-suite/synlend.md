@@ -25,7 +25,7 @@ ii.  On Polygon, only USDC and USDT can be lent or borrowed.
 
 #### 2.  **List of assets that can be used as collateral:**
 
-i.   ****   On BSC, BNB, ETNA token and ETNA NFTs are assets that can be used as collateral. Any other ERC20 token on BSC can be integrated at a later time.
+i.   On BSC, BNB, ETNA token and ETNA NFTs are assets that can be used as collateral. Any other ERC20 token on BSC can be integrated at a later time.
 
 ii.  On Polygon, Matic, ETNA token and ETNA NFTs are assets that can be used as collateral. Any other ERC20 token on Polygon can be integrated at a later time.&#x20;
 
