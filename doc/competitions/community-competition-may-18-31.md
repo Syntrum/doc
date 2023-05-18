@@ -27,7 +27,9 @@ Link to Quest: [https://zealy.io/c/syntrum/questboard/24b00012-2825-4b5a-8408-49
 
 If you are yet to, Like, retweet, and tag the competition announcement.
 
-Link to the quest: [https://zealy.io/c/syntrum/questboard/7ed24044-7a77-4040-aa2f-1f2ac8ce7cfe](https://zealy.io/c/syntrum/questboard/7ed24044-7a77-4040-aa2f-1f2ac8ce7cfe)
+Link to the quest: [https://zealy.io/c/syntrum/questboard/d34f1727-5b14-4e1a-8126-b3813c49b07d](https://zealy.io/c/syntrum/questboard/d34f1727-5b14-4e1a-8126-b3813c49b07d)
+
+Tweet direct link: [https://twitter.com/0xSyntrum/status/1659119126441230337](https://twitter.com/0xSyntrum/status/1659119126441230337)
 
 ### (4) Like, Retweet and tag Podcast announcement&#x20;
 
