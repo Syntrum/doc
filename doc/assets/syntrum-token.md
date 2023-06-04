@@ -28,16 +28,7 @@ SYT serves as a reward for users who participate in the network's staking consen
 
 ## Total Supply and Allocation
 
-|    Allocation Description    |    Amount   | Percentage |
-| :--------------------------: | :---------: | :--------: |
-|          Eco-system          | 200,000,000 |     40%    |
-| Sale (Seed, Private, Public) | 120,000,000 |     24%    |
-|          Partnership         |  80,000,000 |     16%    |
-|             Team             |  35,000,000 |     7%     |
-|          Development         |  30,000,000 |     6%     |
-|           Liquidity          |  20,000,000 |     4%     |
-|           Marketing          |  10,000,000 |     2%     |
-|          Foundation          |  5,000,000  |     1%     |
+<table><thead><tr><th width="295.5806451612903" align="center">Allocation Description</th><th align="center">Amount</th><th align="center">Percentage</th></tr></thead><tbody><tr><td align="center">Eco-system</td><td align="center">200,000,000</td><td align="center">40%</td></tr><tr><td align="center">Sale (Seed, Private, Public)</td><td align="center">120,000,000</td><td align="center">24%</td></tr><tr><td align="center">Partnership</td><td align="center">80,000,000</td><td align="center">16%</td></tr><tr><td align="center">Team</td><td align="center">35,000,000</td><td align="center">7%</td></tr><tr><td align="center">Development</td><td align="center">30,000,000</td><td align="center">6%</td></tr><tr><td align="center">Liquidity</td><td align="center">20,000,000</td><td align="center">4%</td></tr><tr><td align="center">Marketing</td><td align="center">10,000,000</td><td align="center">2%</td></tr><tr><td align="center">Foundation</td><td align="center">5,000,000</td><td align="center">1%</td></tr></tbody></table>
 
 ## Allocation's Lockup and Vesting
 

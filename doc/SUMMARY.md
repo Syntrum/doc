@@ -40,4 +40,4 @@
 
 ## Bug Bounty
 
-* [Wallet Bounty](bug-bounty/wallet-bounty.md)
+* [Wallet](bug-bounty/wallet.md)

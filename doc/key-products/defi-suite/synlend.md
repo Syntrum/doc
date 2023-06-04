@@ -37,7 +37,11 @@ The interest rates algorithm is as follows:
 
 &#x20;   &#x20;
 
-![](<../../.gitbook/assets/image (22).png>)
+<div align="left">
+
+<img src="../../.gitbook/assets/image (22).png" alt="">
+
+</div>
 
 This gives the lending rate as:&#x20;
 
