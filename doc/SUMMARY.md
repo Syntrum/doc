@@ -37,3 +37,7 @@
 
 * [Zealy Competition](competitions/zealy-competition.md)
 * [Community Competition May 18 - 31](competitions/community-competition-may-18-31.md)
+
+## Bug Bounty
+
+* [Wallet Bounty](bug-bounty/wallet-bounty.md)
