@@ -2,7 +2,6 @@
 
 * [Syntrum Intro](README.md)
 * [Roadmap](roadmap.md)
-* [About Us](about-us.md)
 
 ## Technology
 
