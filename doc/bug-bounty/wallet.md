@@ -24,15 +24,27 @@ This is a segment or fragment of the Syntrum wallet that is mainly used to secur
 
 Beyond this, this fragment allows users to carry out basic functions or interactions such as sending and receiving cryptocurrencies, accessing the swap features, importing tokens, and many more. As Syntrum aims to be simple and seamless, the token wallet also enables users to pin buttons for the functions they interact with the most.
 
-#### Token Wallet and Features
+#### Token Wallet Features
 
 <table><thead><tr><th>Feature</th><th width="302.66666666666663">Description</th><th>Development Stage</th></tr></thead><tbody><tr><td><strong>Send feature</strong></td><td>For sending coins/tokens</td><td>✅ Completed</td></tr><tr><td><strong>Receive Feature</strong></td><td>For receiving coins/tokens</td><td>✅ Completed</td></tr><tr><td><strong>Add Token feature</strong></td><td>For adding tokens manually</td><td>✅ Completed</td></tr></tbody></table>
 
 There are other intermediate features that this segment has like view activities or history, view asset statistics and more
 {% endtab %}
 
-{% tab title="Swap Router" %}
-## Details coming soon, Thanks for your patience
+{% tab title="DEX OptiRouter" %}
+DEX OptiRouter is an in-wallet feature of the Syntrum wallet that connects users to multiple DEXs for their trades and routes trades to the best DEX for each attempted trade. OptiRouter defaults the trade to the best DEX but also presents users with a list of alternative DEXs in order of most optimal to least optimal, based on trading price. Users can choose any DEX, even if it is not the best one for the specific trade or swap they want to make.
+
+In the current stage of development, up to three DEXs for each supported chain have been integrated. As the development of the Syntrum wallet progresses, more DEXs will be integrated.
+
+The goal is not only to operate as an on-chain router for DEXs but also to support cross-chain DEX routing of swaps/trades.
+
+**Features that have been integrated at this stage include:**
+
+On-chain swap for supported chains Ability to choose a chain and select a token or search for tokens by name or smart contract address Ability to execute a swap. Currently, known bugs include a buggy Swap function, and ongoing efforts are being made to fix it.
+
+<table><thead><tr><th>Feature</th><th width="302.66666666666663">Description</th><th>Development Stage</th></tr></thead><tbody><tr><td><strong>On-chain swap</strong></td><td>Ability to choose a chain and select a token or search for tokens by name or smart contract address and execute an on-chain swap.</td><td><mark style="color:orange;">⚠️</mark> Integration is undergoing final internal debugging</td></tr><tr><td><strong>Cross-chain Swap</strong></td><td>Ability to choose a chain and select a token or search for tokens by name or smart contract address and execute cross-chain swap.</td><td>⚠ Development in progress</td></tr></tbody></table>
+
+
 {% endtab %}
 
 {% tab title="dApp Browser" %}
@@ -56,7 +68,7 @@ To ensure a smooth launch of Syntrum wallet V1, an alpha launch with limited acc
 
 Syntrum's Bug Bounty Program rewards are at the sole discretion of Syntrum Lab.
 
-<mark style="color:orange;">**Exclusion ⚠️:**</mark> It should be noted that Bugs which have already been submitted by another user or are already known to the Syntrum team or have already been publicly disclosed.
+<mark style="color:orange;">**Exclusion ⚠️:**</mark> Bugs which have already been submitted by another user or are already known to the Syntrum team or have already been publicly disclosed.
 
 * The minimum reward for eligible bugs is equivalent to $50 in BUSD BEP20.
 * Rewards over the minimum are at our discretion, but we will pay significantly more for particularly serious issues. For instance, if the identified issue/bug could put a significant number of users at risk of loss, monetary or otherwise.
