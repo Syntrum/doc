@@ -40,3 +40,4 @@
 ## Bug Bounty
 
 * [Wallet](bug-bounty/wallet.md)
+* [Copy of Wallet](bug-bounty/copy-of-wallet.md)
