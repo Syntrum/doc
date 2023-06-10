@@ -110,3 +110,4 @@ Once the issue has been submitted, our team will review the information, assign 
 
 * Dust token are automatically added: Fix in progress
 * Transaction history and description is inaccurate: Fix in progress
+* NFT tokens appear with transactions when tokens are manually added: Fix in progress
