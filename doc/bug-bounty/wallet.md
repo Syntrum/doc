@@ -108,3 +108,5 @@ Once the issue has been submitted, our team will review the information, assign 
 
 ### Already Reported Bugs and Fixes in Progress&#x20;
 
+* Dust token are automatically added: Fix in progress
+* Transaction history and description is inaccurate: Fix in progress
