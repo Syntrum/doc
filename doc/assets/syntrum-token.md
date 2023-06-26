@@ -58,7 +58,7 @@ The token sale allocation is further allocated as follows:
 * **Seed/strategic Investors Allocation:** 10% released at TGE, and the remaining tokens are locked up for 3 months, then released over an 18-month period, with 5% released each month.
 * **Team Allocation:** No tokens are released at TGE. There is an initial lockup period of 5 months, after which the tokens are released gradually over a 50-month period, with 2% being released each month.
 
-For complete details on tokenomics, lockup and vesting, click [here](http://localhost:5000/s/gGUscxg1GFt2VeQtpOaP/key-products/debank-2.0)
+For complete details on tokenomics, lockup and vesting, click [here](https://docs.google.com/spreadsheets/d/1Ht2ft9YmM943bw6n2ZjXzDj160xLgZcujwniaNuxqKM/edit?usp=sharing)
 
 {% hint style="danger" %}
 Disclaimer: The use cases of the Syntrum token listed above do not indicate investment value as a whole, in part, or individually.
