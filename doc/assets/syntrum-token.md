@@ -1,5 +1,13 @@
 # Syntrum Token
 
+## Token Info
+
+Name: Syntrum
+
+Symbol: SYT
+
+Total Supply: 500,000,000
+
 ## Use cases
 
 Syntrum token (SYT) is the native token of the Syntrum blockchain and ecosystem. It has the following main use cases:
