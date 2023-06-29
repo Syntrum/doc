@@ -30,7 +30,7 @@ To invite frens to Syntrum community, do the following:&#x20;
 
 **Step 1:** Go in your profile within Syntrum's community on zealy, and get your referral by clicking on the button "invite frens".
 
-![](<../.gitbook/assets/image (28).png>)
+![](<../.gitbook/assets/image (10).png>)
 
 **Step 2:** Send your referral links to your friend so they can join our community on crew3 and claim their first quest.
 
