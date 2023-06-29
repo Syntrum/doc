@@ -26,7 +26,7 @@
 
 ## EVENTS
 
-* [SYT Presale](events/token-generation-event.md)
+* [sale](events/token-generation-event.md)
 
 ## Developers Resources
 
