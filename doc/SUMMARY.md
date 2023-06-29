@@ -26,7 +26,7 @@
 
 ## EVENTS
 
-* [Token Generation Event](events/token-generation-event.md)
+* [Syntrum Token (SYT) Presale](events/token-generation-event.md)
 
 ## Developers Resources
 
