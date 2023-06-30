@@ -8,6 +8,18 @@ Symbol: SYT
 
 Total Supply: 500,000,000
 
+Contract Address: [0xc8955E1d6a1785F951180e516ac00b940fF0b249](https://etherscan.io/token/0xc8955E1d6a1785F951180e516ac00b940fF0b249)
+
+**Explorer Links:**
+
+Ethereum: [https://etherscan.io/token/0xc8955E1d6a1785F951180e516ac00b940fF0b249](https://etherscan.io/token/0xc8955E1d6a1785F951180e516ac00b940fF0b249)
+
+Binance: [https://bscscan.com/token/0xc8955e1d6a1785f951180e516ac00b940ff0b249](https://bscscan.com/token/0xc8955e1d6a1785f951180e516ac00b940ff0b249)
+
+Polygon: [https://polygonscan.com/token/0xc8955e1d6a1785f951180e516ac00b940ff0b249](https://polygonscan.com/token/0xc8955e1d6a1785f951180e516ac00b940ff0b249)
+
+Cronos: [https://cronoscan.com/token/0xc8955e1d6a1785f951180e516ac00b940ff0b249](https://cronoscan.com/token/0xc8955e1d6a1785f951180e516ac00b940ff0b249)
+
 ## Use cases
 
 Syntrum token (SYT) is the native token of the Syntrum blockchain and ecosystem. It has the following main use cases:
