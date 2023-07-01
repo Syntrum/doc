@@ -1,3 +1,7 @@
+---
+coverY: 0
+---
+
 # Syntrum Intro
 
 {% hint style="success" %}
