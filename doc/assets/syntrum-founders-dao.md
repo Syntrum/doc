@@ -2,9 +2,9 @@
 
 Introducing Syntrum Founders DAO, a decentralized Autonomous Organization composed of individuals/entities that govern Syntrum. After the decision to onboard founding members to the Syntrum project on April 24, 2024 ([announcement can be found here](https://syntrum.medium.com/join-syntrum-invitation-to-collaborators-and-founding-members-ad5b8f2cdeb1)), the team received numerous suggestions on how to ensure decentralized autonomy. Some proposed the creation of an NFT with voting rights. While everyone interested in participating desired some form of asset creation, the majority preferred tradable assets on DEXs/CEXs.
 
-This led to the creation of Syntrum Founders DAO, a fungible token that grants holders voting and governance rights within the Syntrum ecosystem. Beyond this, holders enjoy various benefits, which includes
+This led to the creation of Syntrum Founders DAO, a fungible token that grants holders voting and governance rights within the Syntrum ecosystem.&#x20;
 
-&#x20;such as exclusive access to early project updates, participation in token holder events, and the opportunity to earn rewards through staking. The token economy is designed to foster engagement, incentivizing active involvement and ensuring a vibrant and dynamic community.
+In addition to this, holders enjoy various benefits, including exclusive access to early project updates and unlimited access to advanced features, special membership NFTs, priority access to earning by participating in the protocol, quarterly rewards in token airdrops, support with personal project development, and much more.
 
 ## Token Info
 
