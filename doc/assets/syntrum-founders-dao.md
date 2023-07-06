@@ -24,6 +24,8 @@ Binance:
 
 ## Total Supply and Allocation
 
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
 <table><thead><tr><th width="287.85577146037195" align="center">Allocation Description</th><th align="center">Amount</th><th align="center">Percentage</th></tr></thead><tbody><tr><td align="center">Governance Reward</td><td align="center">90,000</td><td align="center">9.0%</td></tr><tr><td align="center">DEX Liquidity</td><td align="center">310,000</td><td align="center">31.0%</td></tr><tr><td align="center">Sale</td><td align="center">600,000</td><td align="center">60.0%</td></tr><tr><td align="center"><strong>Total</strong></td><td align="center"><strong>1,000,000</strong></td><td align="center"><strong>100.0%</strong></td></tr></tbody></table>
 
 ## Token Sale&#x20;
