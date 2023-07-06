@@ -34,7 +34,7 @@ Binance:
 
 ## Utilization of Funds
 
-<table><thead><tr><th width="287.85577146037195" align="center">Allocation Description</th><th align="center">Amount</th><th align="center">Percentage</th></tr></thead><tbody><tr><td align="center">Product Marketing</td><td align="center">$72,000</td><td align="center">20.0%</td></tr><tr><td align="center">Operation/Development</td><td align="center">$100,800</td><td align="center">30.0%</td></tr><tr><td align="center">DEX Liquidity</td><td align="center">$187,200</td><td align="center">52.0%</td></tr><tr><td align="center"><strong>Total</strong></td><td align="center"><strong>$360,000</strong></td><td align="center"><strong>100.0%</strong></td></tr></tbody></table>
+<table><thead><tr><th width="287.85577146037195" align="center">Allocation Description</th><th align="center">Amount</th><th align="center">Percentage</th></tr></thead><tbody><tr><td align="center">Product Marketing</td><td align="center">$72,000</td><td align="center">20.0%</td></tr><tr><td align="center">Operation/Development</td><td align="center">$100,800</td><td align="center">28.0%</td></tr><tr><td align="center">DEX Liquidity</td><td align="center">$187,200</td><td align="center">52.0%</td></tr><tr><td align="center"><strong>Total</strong></td><td align="center"><strong>$360,000</strong></td><td align="center"><strong>100.0%</strong></td></tr></tbody></table>
 
 **Note the Following:**
 
