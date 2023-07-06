@@ -1,5 +1,7 @@
 # Syntrum Token
 
+Syntrum token is the native token of the Syntrum blockchain and ecosystem. It has the following information:
+
 ## Token Info
 
 Name: Syntrum
@@ -22,7 +24,7 @@ Cronos: [https://cronoscan.com/token/0xc8955e1d6a1785f951180e516ac00b940ff0b249]
 
 ## Use cases
 
-Syntrum token (SYT) is the native token of the Syntrum blockchain and ecosystem. It has the following main use cases:
+&#x20;Syntrum (SYT) has the following main use cases:
 
 #### Blockchain gas fees&#x20;
 
