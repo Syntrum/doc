@@ -33,7 +33,7 @@
 
 ## Q3 2023
 
-* [ ] Token Smart Contracts Deployment
+* [x] Token Smart Contracts Deployment
 * [ ] Syntrum Wallet Launch (Android)
 * [ ] Presale Rounds
 * [ ] VC partnerships
