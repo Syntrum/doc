@@ -21,8 +21,8 @@
 
 ## Assets
 
-* [Syntrum Token](assets/syntrum-token.md)
 * [Syntrum Founders DAO](assets/syntrum-founders-dao.md)
+* [Syntrum Token](assets/syntrum-token.md)
 * [NFT - SynBox](assets/nft-synbox.md)
 
 ## EVENTS
