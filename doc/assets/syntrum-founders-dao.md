@@ -14,6 +14,15 @@ This led to the creation of Syntrum Founders DAO, a fungible token that grants h
 
 In addition to this, holders enjoy various benefits, including exclusive access to early project updates and unlimited access to advanced features, special membership NFTs, priority access to earning by participating in the protocol, quarterly rewards in token airdrops, support with personal project development, and much more.
 
+## **Benefits of holding SYTDAO**
+
+1. Holders are part of the DAO mechanism, they participate in governance and vote on proposals. Stakers incentivized on a dynamic staking pool (DAO Partcipation not compulsory).
+2. DAO members get rewards in stable coins for participating in governance (DAO) and dApp protocol mechanism.
+3. Participants in SYTDAO sale (founding members) get membership NFT and a custom SynCity NFT.&#x20;
+4. Founding members get a percentage of SYT team’s allocation.
+5. DAO members get up to 40% referal bonus. This means that when a DAO member introduces a project that integrates Syntrums tech, the member gets up to 40% bonus as oppose to the 15% for nonmembers.
+6. SYTDAO holders get access to founders lounge, a hub where members who have project ideas are supported.
+
 ## Token Info
 
 Name: Syntrum Founders DAO
