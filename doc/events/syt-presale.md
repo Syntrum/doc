@@ -46,6 +46,6 @@ If you are participating on a PC, take the following steps:
 
 **Step 5:** Enter the amount you would like to spend and then click on buy now. You may need to sign an approval before confirming it.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 **Note** that the amount of SYT tokens you would be geting at TGE will auto-calculate when you enter the amount you want spend.
