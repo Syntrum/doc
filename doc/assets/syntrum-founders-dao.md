@@ -51,7 +51,7 @@ Binance: [https://bscscan.com/token/0x9D2864E18b265546724e846533210635f6F124C6](
 
 ## Utilization of Funds
 
-<table><thead><tr><th width="287.85577146037195" align="center">Allocation Description</th><th align="center">Amount</th><th align="center">Percentage</th></tr></thead><tbody><tr><td align="center">Affiliate/Refer to Earn</td><td align="center">$18,000</td><td align="center">5.0%</td></tr><tr><td align="center">Product Marketing</td><td align="center">$54,000</td><td align="center">15.0%</td></tr><tr><td align="center">Operation/Development</td><td align="center">$90,000</td><td align="center">25.0%</td></tr><tr><td align="center">DEX Liquidity</td><td align="center">$198,000</td><td align="center">55.0%</td></tr><tr><td align="center"><strong>Total</strong></td><td align="center"><strong>$360,000</strong></td><td align="center"><strong>100.0%</strong></td></tr></tbody></table>
+<table><thead><tr><th width="287.85577146037195" align="center">Allocation Description</th><th align="center">Amount</th><th align="center">Percentage</th></tr></thead><tbody><tr><td align="center">Affiliate/Refer-to-Earn</td><td align="center">$18,000</td><td align="center">5.0%</td></tr><tr><td align="center">Product Marketing</td><td align="center">$54,000</td><td align="center">15.0%</td></tr><tr><td align="center">Operation/Development</td><td align="center">$90,000</td><td align="center">25.0%</td></tr><tr><td align="center">DEX Liquidity</td><td align="center">$198,000</td><td align="center">55.0%</td></tr><tr><td align="center"><strong>Total</strong></td><td align="center"><strong>$360,000</strong></td><td align="center"><strong>100.0%</strong></td></tr></tbody></table>
 
 **Note the Following:**
 
