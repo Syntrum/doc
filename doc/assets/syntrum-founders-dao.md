@@ -30,7 +30,7 @@ Name: Syntrum Founders DAO
 
 Symbol: SYTDAO
 
-Total Supply: 500,000
+Total Supply: 1,000,000
 
 Contract Address on all chains:
 
