@@ -25,10 +25,6 @@
 * [Syntrum Token](assets/syntrum-token.md)
 * [NFT - SynBox](assets/nft-synbox.md)
 
-## EVENTS
-
-* [SYT Presale](events/syt-presale.md)
-
 ## Developers Resources
 
 * [DeFi APIs](developers-resources/defi-apis.md)
