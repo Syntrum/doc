@@ -9,6 +9,7 @@
 
 ## Key Products
 
+* [Syntrum DEX aggregator](key-products/syntrum-dex-aggregator.md)
 * [DeFi Suite](key-products/defi-suite/README.md)
   * [SynLend](key-products/defi-suite/synlend.md)
   * [SynMargin](key-products/defi-suite/synmargin.md)
